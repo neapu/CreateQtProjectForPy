@@ -1,8 +1,16 @@
+#!/usr/bin/env python
+
 import os
 import sys
 
+project_name = ''
+
 # 项目名称
-project_name = input('项目名称[new_project]:')
+if len(sys.argv) == 2:
+    project_name = sys.argv[1]
+
+if project_name == '':
+    project_name = input('项目名称[new_project]:')
 
 if project_name == '':
     project_name = 'new_project'
